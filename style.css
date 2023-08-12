@@ -33,16 +33,52 @@
   }
 
   nav ul {
-    display: flex;
+    display: none;
     list-style: none;
     align-items: center;
     gap: 5rem;
+  }
+
+  nav ul.show {
+    display: flex; /* Display the list when the menu is toggled */
+        flex-direction: column;
+        position: absolute;
+        top: 85px; /* Adjust the top position as needed */
+        left: 0;
+        background-color: black;
+        width: 100%;
+        padding: 20px;
   }
 
   nav ul li a {
     text-decoration: none;
     color: white;
   }
+
+  .navbar-toggle {
+    display: block;
+        cursor: pointer;
+        transition: all;
+  }
+
+  .bar {
+    width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+  }
+
+  @media screen and (min-width: 576px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+  }
+}
 
   nav ul li a:hover {
     border-bottom: 1px solid red;
@@ -640,7 +676,11 @@ span {
             color: #FF4343;
         }
 
-        @media screen and (max-width:1024px) {
+        @media screen and (max-width:992px) {
+          .text-home h1 {
+            font-size: 70px;
+          }
+
           .text-project P {
             font-size: 17px;
           }
@@ -663,10 +703,6 @@ span {
         }
 
         @media screen and (max-width: 768px) {
-
-          nav {
-            padding: 28px 50px;
-          }
 
           nav ul {
             gap: 1.5rem;
@@ -727,13 +763,9 @@ span {
           }
         }
 
-        @media screen and (max-width:425px) {
+        @media screen and (max-width:576px) {
           nav ul {
             display: none;
-          }
-
-          nav .logo {
-            margin: auto;
           }
 
           .home {

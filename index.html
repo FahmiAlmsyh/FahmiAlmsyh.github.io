@@ -24,10 +24,7 @@
   <!-- navbar -->
     <nav>
       <div class="logo">Fahmi Alamsyah</div>
-      <ul>
-        <li class="toggle">
-          <img src="img/burger-menu 1.png" alt="Bars">
-      </li>
+      <ul id="navbarLinks">
         <li class="navbar-item"><a href="#">Home</a></li>
         <li class="navbar-item"><a href="#project">Project</a></li>
         <li class="navbar-item"><a href="#certi">Certificate</a></li>
@@ -35,6 +32,11 @@
         <li class="navbar-item"><a href="#about">About</a></li>
       </ul>
 
+      <div class="navbar-toggle" id="navbarToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
       
     </nav>
     <!-- end navbar -->
@@ -412,6 +414,17 @@
 
   <!-- js -->
   <script src="main.js"></script>
+
+  <!-- toggle -->
+  <script>
+    var navbarToggle = document.getElementById("navbarToggle");
+    var navbarLinks = document.getElementById("navbarLinks");
+
+    navbarToggle.addEventListener("click", function() {
+        navbarLinks.classList.toggle("show");
+    });
+</script>
+
 
 
      <!-- aos -->
